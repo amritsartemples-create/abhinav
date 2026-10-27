@@ -3,7 +3,7 @@ export const site = {
   shortName: "Akanksha Pande",
   brand: "Star Shuffle",
   tagline: "Global Lady Astrologer",
-  url: "https://www.astrologerakankshapande.com",
+  url: "https://starshuffleofficial.com",
   phoneDisplay: "+91-9173629453",
   phoneHref: "tel:+919173629453",
   whatsapp: "919173629453",
