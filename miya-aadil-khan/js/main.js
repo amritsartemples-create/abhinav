@@ -73,6 +73,33 @@
     start();
   }
 
+  /* ---------- Reviews slider ---------- */
+  var reviews = document.querySelector(".reviews");
+  if (reviews) {
+    var rTrack = reviews.querySelector(".reviews__track");
+    var rTimer = null;
+    function step() {
+      var card = rTrack.querySelector(".quote");
+      return card ? card.getBoundingClientRect().width + 24 : rTrack.clientWidth;
+    }
+    function move(dir) {
+      var atEnd = rTrack.scrollLeft + rTrack.clientWidth >= rTrack.scrollWidth - 5;
+      if (dir > 0 && atEnd) rTrack.scrollTo({ left: 0 });
+      else if (dir < 0 && rTrack.scrollLeft <= 5) rTrack.scrollTo({ left: rTrack.scrollWidth });
+      else rTrack.scrollBy({ left: dir * step() });
+    }
+    function rStart() { if (!reduceMotion && !rTimer) rTimer = setInterval(function () { move(1); }, 4500); }
+    function rStop() { clearInterval(rTimer); rTimer = null; }
+    reviews.querySelector(".reviews__btn--prev").addEventListener("click", function () { move(-1); });
+    reviews.querySelector(".reviews__btn--next").addEventListener("click", function () { move(1); });
+    reviews.addEventListener("mouseenter", rStop);
+    reviews.addEventListener("mouseleave", rStart);
+    reviews.addEventListener("focusin", rStop);
+    reviews.addEventListener("focusout", rStart);
+    rTrack.addEventListener("touchstart", rStop, { passive: true });
+    rStart();
+  }
+
   /* ---------- Counters ---------- */
   var nums = document.querySelectorAll("[data-count]");
   if (nums.length && "IntersectionObserver" in window && !reduceMotion) {
