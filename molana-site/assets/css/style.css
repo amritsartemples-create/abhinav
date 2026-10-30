@@ -203,9 +203,9 @@ h1,h2,h3,h4{line-height:1.2}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}.animate-service{opacity:1;transform:none}}
 
 /* top marquee strip */
-.top-strip-bar{background:#1a0a05 linear-gradient(90deg,#1a0a05,#2b1209);border-bottom:1px solid rgba(245,197,66,.3)}
+.top-strip-bar{background:linear-gradient(90deg,var(--g1),var(--g3));border-bottom:1px solid rgba(245,197,66,.3)}
 .top-strip{display:flex;align-items:center;gap:16px;padding:9px 0}
-.blink{flex:none;background:linear-gradient(135deg,#f59e0b,#c2410c);color:#fff;font-weight:800;font-size:15px;padding:8px 20px;border-radius:50px;box-shadow:0 4px 12px rgba(0,0,0,.3);animation:blink 1.6s ease-in-out infinite}
+.blink{flex:none;background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--g1);font-weight:800;font-size:15px;padding:8px 20px;border-radius:50px;box-shadow:0 4px 12px rgba(0,0,0,.3);animation:blink 1.6s ease-in-out infinite}
 @keyframes blink{50%{opacity:.65}}
 .ticker{flex:1;min-width:0;overflow:hidden;border:1px solid rgba(245,197,66,.35);border-radius:50px;padding:7px 0;color:var(--gold2);font-size:15px;white-space:nowrap}
 .ticker-move{display:inline-flex;animation:tick 28s linear infinite;will-change:transform}
