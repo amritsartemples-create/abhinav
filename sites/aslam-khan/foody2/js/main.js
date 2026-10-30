@@ -86,6 +86,43 @@
     start();
   });
 
+  // Content protection: block right-click, image drag, copy/cut and dev-tool shortcuts
+  var allow = function (el) { return el && el.closest && el.closest("input, textarea"); };
+  document.addEventListener("contextmenu", function (e) { if (!allow(e.target)) e.preventDefault(); });
+  document.addEventListener("dragstart", function (e) {
+    if (e.target.tagName === "IMG" || e.target.tagName === "VIDEO") e.preventDefault();
+  });
+  ["copy", "cut"].forEach(function (ev) {
+    document.addEventListener(ev, function (e) { if (!allow(e.target)) e.preventDefault(); });
+  });
+  document.addEventListener("keydown", function (e) {
+    var k = (e.key || "").toLowerCase();
+    var c = e.ctrlKey || e.metaKey;
+    if (e.key === "F12" ||
+        (c && ["u", "s", "p", "c", "a"].indexOf(k) !== -1 && !allow(e.target)) ||
+        (c && e.shiftKey && ["i", "j", "c"].indexOf(k) !== -1)) {
+      e.preventDefault();
+    }
+  });
+  document.querySelectorAll("video").forEach(function (v) {
+    v.setAttribute("controlsList", "nodownload noplaybackrate");
+    v.setAttribute("disablePictureInPicture", "");
+  });
+
+  // Count-up numbers in "Why Choose Us ?"
+  function countUp(el) {
+    var target = parseInt(el.getAttribute("data-count"), 10);
+    if (reduceMotion) return;
+    var start = null;
+    function frame(t) {
+      if (start === null) start = t;
+      var p = Math.min((t - start) / 1800, 1);
+      el.textContent = Math.round(target * (1 - Math.pow(1 - p, 3))) + "+";
+      if (p < 1) requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  }
+
   // Reveal on scroll
   var items = document.querySelectorAll(".reveal");
   if (!("IntersectionObserver" in window)) {
@@ -96,6 +133,7 @@
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {
         entry.target.classList.add("is-visible");
+        entry.target.querySelectorAll("[data-count]").forEach(countUp);
         io.unobserve(entry.target);
       }
     });

@@ -46,18 +46,25 @@
     <symbol id="i-left" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="m15 5-7 7 7 7"/></symbol>
     <symbol id="i-right" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="m9 5 7 7-7 7"/></symbol>
     <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></symbol>
+    <symbol id="i-ring" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="15" r="5"/><circle cx="15" cy="15" r="5"/><path d="m10 3 2 3 2-3z" stroke-linejoin="round"/></g></symbol>
+    <symbol id="i-smile" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9.5"/><path d="M8 14.5a5 5 0 0 0 8 0"/><path d="M9 9.5h.01M15 9.5h.01" stroke-width="3"/></g></symbol>
+    <symbol id="i-heartbeat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" d="M12 20s-8-4.9-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 9c0 6.1-8 11-8 11zM4 12h4l1.5-3 3 6 1.5-3h6"/></symbol>
+    <symbol id="i-thumb" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" d="M7 10v11H3V10zm0 0 4-8c1.7 0 2.8 1.3 2.4 3L13 9h6.2a2 2 0 0 1 2 2.4l-1.6 7.6a2.5 2.5 0 0 1-2.4 2H7"/></symbol>
   </svg>
 
   <!-- Top bar -->
   <section class="topbar">
-    <div class="container topbar__inner">
-      <div class="topbar__badge">100% CLIENTS SATISFACTION</div>
-      <div class="ticker" aria-label="Announcement">
-        <div class="ticker__track">
-          <span>अगर आप लव ब्रेकअप जैसी किसी भी किस्म की मुश्किलात का सामना कर रहे हैं, प्रेम-प्यार और इश्क़ से जुड़े मुश्किलात, शादी-ब्याह में आने वाले मसले, खोये प्यार को वापस पाने में मसले, और इनके ही जैसे ज़िन्दगी में आने वाले और भी मसले-मसाइल से परेशान हैं तो आप संपर्क कर सकते हैं</span>
-          <span aria-hidden="true">अगर आप लव ब्रेकअप जैसी किसी भी किस्म की मुश्किलात का सामना कर रहे हैं, प्रेम-प्यार और इश्क़ से जुड़े मुश्किलात, शादी-ब्याह में आने वाले मसले, खोये प्यार को वापस पाने में मसले, और इनके ही जैसे ज़िन्दगी में आने वाले और भी मसले-मसाइल से परेशान हैं तो आप संपर्क कर सकते हैं</span>
-        </div>
-      </div>
+    <a class="topbar__marquee marquee" href="tel:+91-9521576873" lang="hi">
+      <div class="marquee__inner"><span>✦ खुदा के करम से नेक को खून के आसूं रोने नहीं दूंगा, दुश्मन का खाली नाम बताओ उसे चैन से सोने नहीं दूंगा</span><span aria-hidden="true">✦ खुदा के करम से नेक को खून के आसूं रोने नहीं दूंगा, दुश्मन का खाली नाम बताओ उसे चैन से सोने नहीं दूंगा</span></div>
+    </a>
+    <div class="topbar__right">
+      <span class="topbar__note" lang="hi">हम आपकी मदद करने के लिए हमेशा मौजूद हैं !!</span>
+      <ul class="topbar__pills">
+        <li>Love Back <svg class="ico" aria-hidden="true"><use href="#i-heart"/></svg></li>
+        <li>Financial <b aria-hidden="true">₹</b></li>
+        <li>5 Star Rated <svg class="ico" aria-hidden="true"><use href="#i-star"/></svg></li>
+        <li>Marriage <svg class="ico" aria-hidden="true"><use href="#i-ring"/></svg></li>
+      </ul>
     </div>
   </section>
 
@@ -79,12 +86,12 @@
     </div>
   </header>
 
-  <div class="banner banner--narrow">
+  <div class="banner banner--narrow mobile-only">
     <a href="tel:+91-9521576873"><img src="foody2/img/contact.gif" width="550" height="150" alt="Call us for instant solution +91-9521576873"></a>
   </div>
 
   <!-- Second line -->
-  <section class="tagline">
+  <section class="tagline mobile-only">
     <div class="container">
       <p class="tagline__box">It will help you in solving all types of problems and will change your life completely.</p>
     </div>
@@ -109,6 +116,11 @@
     <button class="slider__arrow slider__arrow--next" type="button" data-next aria-label="Next slide"><svg aria-hidden="true"><use href="#i-right"/></svg></button>
     <div class="slider__dots" data-dots></div>
   </section>
+
+  <!-- second marquee -->
+  <a class="marquee marquee--band" href="tel:+91-9521576873" lang="hi">
+    <div class="marquee__inner"><span>✦ आप चाहते है किसी को भी अपने वश मे करना, यदि आप किसी भी समस्याओं का सामना कर रहे हैं तो बस हमसे संपर्क करें क्योंकि केवल एक कॉल आपका जीवन बदल सकता है call:+91-9521576873</span><span aria-hidden="true">✦ आप चाहते है किसी को भी अपने वश मे करना, यदि आप किसी भी समस्याओं का सामना कर रहे हैं तो बस हमसे संपर्क करें क्योंकि केवल एक कॉल आपका जीवन बदल सकता है call:+91-9521576873</span></div>
+  </a>
 
   <!-- Our Best Services -->
   <section class="section">
@@ -206,6 +218,87 @@
             <a class="btn btn--gold" href="tel:+91-9521576873"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Call Now</a>
           </div>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Other Popular Services -->
+  <section class="section section--cream">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow eyebrow--lines">Islamic Astrology</span>
+        <h2 class="smallcaps">Other Popular Services</h2>
+        <p>Are You Experiencing Difficulties In Your Life? Feel Free To Consult With Astrologer and Get Permanent Solution Call</p>
+      </div>
+      <div class="grid grid--3">
+        <div class="svc reveal">
+          <h3>Astrology Service</h3>
+          <ul>
+          <li>Dua &amp; Wazifa Specialist</li>
+          <li>Istikhara For Love Marriage</li>
+          <li>Dua For Love Problem Solution</li>
+          <li>Wazifa For Lost Love Back</li>
+          <li>Bring Your Love Back</li>
+          <li>Get Lost Love Back Specialist</li>
+          </ul>
+          <a class="btn btn--gold" href="tel:+91-9521576873"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Call +91-9521576873</a>
+        </div>
+        <div class="svc reveal">
+          <h3>Other Astrology Service</h3>
+          <ul>
+          <li>Dua For Husband Wife Dispute</li>
+          <li>Wazifa Family Problem Solution</li>
+          <li>Dua For Stop Divorce Problem</li>
+          <li>Relationship Problem Solution</li>
+          <li>Stop Husband Wife Dispute</li>
+          <li>Istikhara For Breakup Problem</li>
+          </ul>
+          <a class="btn btn--gold" href="tel:+91-9521576873"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Call +91-9521576873</a>
+        </div>
+        <div class="svc reveal">
+          <h3>Other Astrology Service</h3>
+          <ul>
+          <li>Childless Problem Solution</li>
+          <li>Get Desired Love Marriage</li>
+          <li>Parents Approval For Marriage</li>
+          <li>Intercast Love Marriage</li>
+          <li>Dua For Delay In Marriage</li>
+          <li>Extra Marital Affairs Solution</li>
+          </ul>
+          <a class="btn btn--gold" href="tel:+91-9521576873"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Call +91-9521576873</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us (stats) -->
+  <section class="stats">
+    <div class="container">
+      <div class="section-head section-head--dark reveal">
+        <span class="eyebrow">Pure Remedies For All Problems</span>
+        <h2>Why Choose Us ?</h2>
+      </div>
+      <div class="grid grid--stats">
+        <div class="stat reveal">
+          <span class="stat__icon"><svg aria-hidden="true"><use href="#i-smile"/></svg></span>
+          <strong data-count="52020">52020+</strong>
+          <span>Happy Customers</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat__icon"><svg aria-hidden="true"><use href="#i-heartbeat"/></svg></span>
+          <strong data-count="32000">32000+</strong>
+          <span>End Love Issues</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat__icon"><svg aria-hidden="true"><use href="#i-ring"/></svg></span>
+          <strong data-count="15220">15220+</strong>
+          <span>Delay In Marriage</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat__icon"><svg aria-hidden="true"><use href="#i-thumb"/></svg></span>
+          <strong data-count="36007">36007+</strong>
+          <span>Solve Career Issues</span>
+        </div>
       </div>
     </div>
   </section>
@@ -341,7 +434,10 @@
           <div class="post__body">
             <a class="post__title" href="tel:+91-9521576873">Parents Approval For Love Marriage</a>
             <p>No one can be found by crying. No one can be forgotten by losing. Call. If there is a problem then there is a solution too. One phone call can change your life.</p>
-            <a class="btn btn--wa btn--block" href="https://wa.me/919521576873/?text=I%20want%20your%20services%20!"><svg class="ico" aria-hidden="true"><use href="#i-whatsapp"/></svg>Whatsapp Chat: +91-9521576873</a>
+            <div class="post__actions">
+              <a class="btn btn--wa" href="https://wa.me/919521576873/?text=I%20want%20your%20services%20!"><svg class="ico" aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp</a>
+              <a class="btn btn--gold" href="tel:+91-9521576873"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Call Now</a>
+            </div>
           </div>
         </article>
         <article class="post reveal">
@@ -349,7 +445,10 @@
           <div class="post__body">
             <a class="post__title" href="tel:+91-9521576873">Childless Problem Solution</a>
             <p>No one can be found by crying. No one can be forgotten by losing. Call. If there is a problem then there is a solution too. One phone call can change your life.</p>
-            <a class="btn btn--wa btn--block" href="https://wa.me/919521576873/?text=I%20want%20your%20services%20!"><svg class="ico" aria-hidden="true"><use href="#i-whatsapp"/></svg>Whatsapp Chat: +91-9521576873</a>
+            <div class="post__actions">
+              <a class="btn btn--wa" href="https://wa.me/919521576873/?text=I%20want%20your%20services%20!"><svg class="ico" aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp</a>
+              <a class="btn btn--gold" href="tel:+91-9521576873"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Call Now</a>
+            </div>
           </div>
         </article>
         <article class="post reveal">
@@ -357,7 +456,10 @@
           <div class="post__body">
             <a class="post__title" href="tel:+91-9521576873">Intercast Love Marriage Solution</a>
             <p>No one can be found by crying. No one can be forgotten by losing. Call. If there is a problem then there is a solution too. One phone call can change your life.</p>
-            <a class="btn btn--wa btn--block" href="https://wa.me/919521576873/?text=I%20want%20your%20services%20!"><svg class="ico" aria-hidden="true"><use href="#i-whatsapp"/></svg>Whatsapp Chat: +91-9521576873</a>
+            <div class="post__actions">
+              <a class="btn btn--wa" href="https://wa.me/919521576873/?text=I%20want%20your%20services%20!"><svg class="ico" aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp</a>
+              <a class="btn btn--gold" href="tel:+91-9521576873"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Call Now</a>
+            </div>
           </div>
         </article>
         <article class="post reveal">
@@ -365,7 +467,10 @@
           <div class="post__body">
             <a class="post__title" href="tel:+91-9521576873">Family Problem Solution</a>
             <p>No one can be found by crying. No one can be forgotten by losing. Call. If there is a problem then there is a solution too. One phone call can change your life.</p>
-            <a class="btn btn--wa btn--block" href="https://wa.me/919521576873/?text=I%20want%20your%20services%20!"><svg class="ico" aria-hidden="true"><use href="#i-whatsapp"/></svg>Whatsapp Chat: +91-9521576873</a>
+            <div class="post__actions">
+              <a class="btn btn--wa" href="https://wa.me/919521576873/?text=I%20want%20your%20services%20!"><svg class="ico" aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp</a>
+              <a class="btn btn--gold" href="tel:+91-9521576873"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Call Now</a>
+            </div>
           </div>
         </article>
         <article class="post reveal">
@@ -373,7 +478,10 @@
           <div class="post__body">
             <a class="post__title" href="tel:+91-9521576873">Career Problem Solution</a>
             <p>No one can be found by crying. No one can be forgotten by losing. Call. If there is a problem then there is a solution too. One phone call can change your life.</p>
-            <a class="btn btn--wa btn--block" href="https://wa.me/919521576873/?text=I%20want%20your%20services%20!"><svg class="ico" aria-hidden="true"><use href="#i-whatsapp"/></svg>Whatsapp Chat: +91-9521576873</a>
+            <div class="post__actions">
+              <a class="btn btn--wa" href="https://wa.me/919521576873/?text=I%20want%20your%20services%20!"><svg class="ico" aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp</a>
+              <a class="btn btn--gold" href="tel:+91-9521576873"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Call Now</a>
+            </div>
           </div>
         </article>
         <article class="post reveal">
@@ -381,7 +489,10 @@
           <div class="post__body">
             <a class="post__title" href="tel:+91-9521576873">Gf/Bf Problem Solution</a>
             <p>No one can be found by crying. No one can be forgotten by losing. Call. If there is a problem then there is a solution too. One phone call can change your life.</p>
-            <a class="btn btn--wa btn--block" href="https://wa.me/919521576873/?text=I%20want%20your%20services%20!"><svg class="ico" aria-hidden="true"><use href="#i-whatsapp"/></svg>Whatsapp Chat: +91-9521576873</a>
+            <div class="post__actions">
+              <a class="btn btn--wa" href="https://wa.me/919521576873/?text=I%20want%20your%20services%20!"><svg class="ico" aria-hidden="true"><use href="#i-whatsapp"/></svg>WhatsApp</a>
+              <a class="btn btn--gold" href="tel:+91-9521576873"><svg class="ico" aria-hidden="true"><use href="#i-phone"/></svg>Call Now</a>
+            </div>
           </div>
         </article>
       </div>
