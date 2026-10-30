@@ -32,4 +32,22 @@
     var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("show-service");io.unobserve(e.target)}})},{threshold:.15});
     cards.forEach(function(c){io.observe(c)});
   }else cards.forEach(function(c){c.classList.add("show-service")});
+  // Reviews slider (3 / 2 / 1 per view)
+  var rv=document.getElementById("rvSlider");
+  if(rv){
+    var track=rv.querySelector(".rv-track"),items=track.children,pos=0,timer;
+    function pv(){return window.innerWidth<=640?1:window.innerWidth<=1024?2:3}
+    function max(){return Math.max(0,items.length-pv())}
+    function show(n){pos=n>max()?0:n<0?max():n;track.style.transform="translateX(-"+(pos*100/pv())+"%)"}
+    function auto(){clearInterval(timer);timer=setInterval(function(){show(pos+1)},4500)}
+    rv.querySelector(".rv-prev").addEventListener("click",function(){show(pos-1);auto()});
+    rv.querySelector(".rv-next").addEventListener("click",function(){show(pos+1);auto()});
+    rv.addEventListener("mouseenter",function(){clearInterval(timer)});
+    rv.addEventListener("mouseleave",auto);
+    var sx=0;
+    rv.addEventListener("touchstart",function(e){sx=e.touches[0].clientX},{passive:true});
+    rv.addEventListener("touchend",function(e){var d=e.changedTouches[0].clientX-sx;if(Math.abs(d)>40){show(pos+(d<0?1:-1));auto()}});
+    window.addEventListener("resize",function(){show(pos)});
+    auto();
+  }
 })();

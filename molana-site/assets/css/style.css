@@ -228,3 +228,69 @@ h1,h2,h3,h4{line-height:1.2}
 .topbar__pills i,.topbar__pills b{color:var(--gold);margin-left:4px}
 @media(max-width:1024px){.topbar{flex-direction:column;align-items:stretch;gap:10px}.topbar__right{justify-content:center}}
 @media(prefers-reduced-motion:reduce){.marquee__inner{animation:tick 32s linear infinite!important}}
+
+/* serif section titles + underline */
+.popular h2,.counter-section h2,.range h2,.footer-cta h2,.pop-card h3,.range-card h3,.footer h4{font-family:Georgia,"Times New Roman",serif}
+.sh-line span{display:inline-flex;align-items:center;gap:14px}
+.sh-line span::before,.sh-line span::after{content:"";width:40px;height:2px;background:var(--gold)}
+.sh-line h2::after,.sh-dark h2::after{content:"";display:block;width:90px;height:4px;border-radius:4px;margin:14px auto 0;background:linear-gradient(90deg,var(--g3),var(--gold),var(--g3))}
+
+/* Other popular services */
+.popular{background:var(--cream)}
+.pop-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.pop-card{background:var(--g1);color:#fff;border-radius:24px;padding:28px 26px;box-shadow:0 20px 40px rgba(5,46,22,.25);transition:transform .35s}
+.pop-card:hover{transform:translateY(-6px)}
+.pop-card h3{color:var(--gold);font-size:21px;font-variant:small-caps;margin-bottom:18px}
+.pop-card li{display:flex;gap:12px;align-items:center;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.1);font-weight:700}
+.pop-card li::before{content:"✦";color:var(--gold)}
+.pop-btn{display:inline-flex;align-items:center;gap:8px;margin-top:24px;background:linear-gradient(180deg,var(--gold),#e0a800);color:var(--g1);font-weight:800;font-size:14px;padding:12px 20px;border-radius:12px;box-shadow:0 6px 14px rgba(0,0,0,.25);transition:.25s}
+.pop-btn:hover{transform:translateY(-2px);background:#fff}
+
+/* Why choose us counters */
+.counter-section{position:relative;overflow:hidden;background:radial-gradient(ellipse at center,#0b3a1c,#041a0c 75%);padding:80px 0;border-top:4px solid var(--gold);border-bottom:0}
+.counter-section .container{position:relative;z-index:1}
+.sh-dark{margin-bottom:36px}
+.sh-dark span{color:var(--gold);letter-spacing:2.5px}
+.sh-dark h2{color:#fff;font-size:clamp(28px,4vw,40px)}
+.sh-dark p{color:#f3e7c8}
+.counter-grid{max-width:960px;margin:auto}
+.counter-grid div{background:rgba(255,255,255,.06);border:1px solid rgba(245,197,66,.4);padding:26px 10px 24px;border-radius:16px;backdrop-filter:blur(2px)}
+.counter-grid i{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;margin:0 auto 12px;background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--g1);font-size:28px}
+.counter-grid h3{font-family:Georgia,serif;color:#fff;font-size:clamp(28px,3.4vw,42px)}
+.counter-grid p{color:var(--gold2)}
+.bk{position:absolute;border-radius:50%;background:rgba(34,120,60,.35);filter:blur(1px)}
+.b1{width:180px;height:180px;left:1%;top:15%}
+.b2{width:150px;height:150px;left:22%;top:8%;background:rgba(245,197,66,.14)}
+.b3{width:120px;height:120px;right:22%;top:20%;background:rgba(245,197,66,.1)}
+.b4{width:70px;height:70px;right:4%;bottom:12%}
+
+/* Range of services */
+.range{background:linear-gradient(180deg,var(--g1),#031c0d);border-top:4px solid var(--gold)}
+.range-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.range-card{background:rgba(255,255,255,.05);border:1px solid rgba(245,197,66,.35);border-radius:20px;padding:26px 20px;text-align:center;color:#fff;display:flex;flex-direction:column;align-items:center;transition:transform .35s,background .35s}
+.range-card:hover{transform:translateY(-6px);background:rgba(255,255,255,.09)}
+.range-card img{width:84px;height:84px;border-radius:50%;object-fit:cover;border:3px solid var(--gold);margin-bottom:14px}
+.range-card h3{color:var(--gold2);font-size:20px;margin-bottom:10px}
+.range-card p{font-size:14px;color:#e8f3ea;margin-bottom:auto}
+.range-card .pop-btn{margin-top:20px}
+
+/* Reviews slider */
+.rv-slider{position:relative;padding:0 26px}
+.rv-viewport{overflow:hidden;padding:10px 4px 24px;margin:0 -4px}
+.rv-track{display:flex;transition:transform .55s ease;--pv:3}
+.rv-track .review{flex:0 0 calc(100%/var(--pv) - 22px);margin:0 11px;display:flex;flex-direction:column}
+.rv-btn{position:absolute;top:50%;transform:translateY(-60%);width:44px;height:44px;border-radius:50%;border:2px solid var(--gold);background:var(--g2);color:var(--gold);cursor:pointer;z-index:3;transition:.25s}
+.rv-btn:hover{background:var(--gold);color:var(--g1)}
+.rv-prev{left:-8px}.rv-next{right:-8px}
+@media(max-width:1024px){.rv-track{--pv:2}.pop-grid{grid-template-columns:1fr 1fr}.range-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.rv-track{--pv:1}.pop-grid,.range-grid{grid-template-columns:1fr}.rv-slider{padding:0 16px}}
+
+/* Footer */
+.footer{background:var(--g1) radial-gradient(circle,rgba(245,197,66,.09) 2px,transparent 2.5px) 0 0/34px 34px;position:relative}
+.footer-cta{text-align:center;padding-bottom:36px;margin-bottom:34px;border-bottom:1px solid rgba(255,255,255,.1)}
+.footer-cta h2{font-size:clamp(26px,3.6vw,38px);color:var(--gold2);margin-bottom:8px}
+.footer-cta p{color:#e8f3ea;max-width:720px;margin:0 auto 22px;font-size:17px}
+.footer-cta .contact-actions{justify-content:center}
+.footer h4{font-size:20px}
+.f-contact i{color:var(--gold)}
+.copyright{max-width:none;width:min(1180px,92%)}
