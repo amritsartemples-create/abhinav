@@ -1,0 +1,143 @@
+/* =========================================================
+   Astrologer V.K Shastri — GOLDEN & BLACK theme
+   Load AFTER style.css and dark.css.
+   ========================================================= */
+
+:root {
+  /* Re-map the maroon scale to black + gold */
+  --maroon-900: #000000;
+  --maroon-800: #0a0a0a;
+  --maroon-700: #141414;
+  --maroon-600: #d4af37;
+  --maroon-100: rgba(212, 175, 55, 0.12);
+
+  --gold-500: #d4af37;
+  --gold-400: #e6c55a;
+  --gold-300: #f6e27a;
+  --gold-deep: #9c7a1c;
+
+  --bg: #050505;
+  --bg-2: #0c0c0c;
+  --surface: #121212;
+  --surface-2: #1b1b1b;
+  --text: #f2ede0;
+  --text-soft: #b9b1a0;
+  --head: #e6c55a;
+  --line: rgba(212, 175, 55, 0.2);
+
+  --gold-grad: linear-gradient(135deg, #f6e27a 0%, #d4af37 45%, #9c7a1c 100%);
+  --shadow-gold: 0 10px 28px rgba(212, 175, 55, 0.28);
+}
+
+body { background: var(--bg); }
+
+/* Metallic gold headings */
+.title, .cta h2, .card__body h3, .serve__body h3, .benefit h3, .why__box h3,
+.contact__form h3, .contact__info h3, .footer h3 {
+  background: var(--gold-grad);
+  -webkit-background-clip: text; background-clip: text;
+  color: transparent;
+}
+.section__head .title::after { filter: drop-shadow(0 0 6px rgba(212, 175, 55, .5)); }
+
+/* Buttons: gold with black text */
+.btn--primary, .btn--call, .btn--gold, .mbar__call {
+  background: var(--gold-grad); color: #000; box-shadow: var(--shadow-gold);
+}
+.btn--primary:hover, .btn--call:hover, .btn--gold:hover { background: linear-gradient(135deg, #fff1a8, #e6c55a 45%, #b38f25); box-shadow: 0 12px 32px rgba(212, 175, 55, .42); }
+.mbar__call { color: #000 !important; }
+.btn--outline { border-color: var(--gold-500); color: var(--gold-300); }
+.btn--outline:hover { background: var(--gold-500); color: #000; }
+.btn--ghost:hover { color: #fff; }
+
+/* Header */
+.topbar { background: #000; border-bottom: 2px solid var(--gold-500); }
+.topbar__contact .ic { color: var(--gold-400); }
+.brandbar { background: #fffaf0; border-bottom: 3px solid var(--gold-500); }
+
+/* Hero + marquee */
+.hero, .banner { background: #000; }
+.hero .carousel__nav { background: rgba(0, 0, 0, .6); color: var(--gold-300); border: 1px solid rgba(212, 175, 55, .5); }
+.hero .carousel__dot[aria-selected="true"] { background: var(--gold-500); }
+.strip { background: var(--gold-grad); color: #000; border-block: 2px solid #000; }
+
+/* Sections */
+.section--cream, .contact {
+  background:
+    radial-gradient(900px 420px at 100% 0, rgba(212, 175, 55, .08), transparent 60%),
+    radial-gradient(1.2px 1.2px at 22% 30%, rgba(255, 255, 255, .35) 50%, transparent 51%) 0 0 / 380px 380px,
+    var(--bg-2);
+}
+.section--dark {
+  background:
+    radial-gradient(1000px 500px at 85% -10%, rgba(212, 175, 55, .16), transparent 60%),
+    radial-gradient(800px 500px at -10% 110%, rgba(212, 175, 55, .08), transparent 60%),
+    linear-gradient(160deg, #000, #111 55%, #000);
+  border-block: 1px solid rgba(212, 175, 55, .25);
+}
+.benefits { background: linear-gradient(#000 0 60px, var(--bg) 60px); }
+
+/* Cards: black with a gold hairline + glow on hover */
+.card, .serve__box, .list-card, .review, .feature, .contact__form, .benefit, .info-box, .why__box {
+  background: var(--surface); border-color: var(--line);
+}
+.card:hover, .serve__box:hover, .benefit:hover, .why__box:hover {
+  border-color: rgba(212, 175, 55, .6);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, .7), 0 0 0 1px rgba(212, 175, 55, .25), 0 0 30px rgba(212, 175, 55, .12);
+}
+.card__img::after { background: linear-gradient(transparent, rgba(0, 0, 0, .45)); }
+.benefit::before { background: var(--gold-grad); }
+.info-box { border-left-color: var(--gold-500); }
+.info-box:hover { border-color: var(--gold-300); }
+.info-box h3 { color: var(--head); }
+
+/* About */
+.about__frame { border-color: #1b1b1b; }
+.about__badge { background: #000; border-color: var(--gold-500); }
+
+/* Why choose us icons */
+.why__icon { background: var(--gold-grad); color: #000; }
+
+/* Lists */
+.list-card h3 { background: linear-gradient(120deg, #1b1b1b, #000); color: var(--gold-300); border-bottom: 2px solid var(--gold-500); }
+.list-card a:hover { background: rgba(212, 175, 55, .1); color: var(--gold-300); }
+
+/* Eyebrow pills */
+.eyebrow, .eyebrow--light { background: rgba(212, 175, 55, .08); color: var(--gold-300); border: 1px solid rgba(212, 175, 55, .35); }
+
+/* CTA */
+.cta {
+  background:
+    radial-gradient(700px 400px at 100% 0, rgba(212, 175, 55, .22), transparent 60%),
+    linear-gradient(120deg, #111, #000);
+  border-block: 1px solid rgba(212, 175, 55, .3);
+}
+.float { border-color: var(--gold-500); }
+
+/* Reviews / carousels */
+.carousel__nav { background: #1b1b1b; color: var(--gold-300); border: 1px solid var(--line); }
+.carousel__nav:hover { background: var(--gold-500); color: #000; }
+.carousel__dot { background: rgba(212, 175, 55, .25); }
+.carousel__dot[aria-selected="true"] { background: var(--gold-500); }
+.review figcaption img { border-color: var(--gold-500); }
+.review__quote { color: rgba(212, 175, 55, .14); }
+
+/* Contact */
+.contact__info {
+  background: radial-gradient(500px 300px at 100% 0, rgba(212, 175, 55, .18), transparent 60%), linear-gradient(150deg, #161616, #000);
+  border-color: var(--gold-500);
+}
+.contact__ic { background: var(--gold-grad); color: #000; }
+.contact__ic--wa { background: var(--wa); color: #fff; }
+.field input, .field select, .field textarea { background: #000; border-color: rgba(212, 175, 55, .28); }
+.field .is-invalid { border-color: #ff6b6b; }
+
+/* Payment */
+.feature a, .link-arrow { color: var(--gold-300); }
+
+/* Footer */
+.footer { background: radial-gradient(800px 400px at 0 0, rgba(212, 175, 55, .1), transparent 60%), #000; border-top: 3px solid var(--gold-500); }
+.social a:hover { background: var(--gold-500); color: #000; }
+
+/* Floating call button pulse */
+.fab--call::after { background: var(--gold-500); }
