@@ -1,0 +1,119 @@
+/* =========================================================
+   Astrologer V.K Shastri — DARK theme
+   Load AFTER style.css. Same layout, dark cosmic background.
+   ========================================================= */
+
+:root {
+  --bg: #0f0306;
+  --bg-2: #170509;
+  --surface: #1f080e;
+  --surface-2: #2a0c14;
+  --text: #f3e6e2;
+  --text-soft: #c9b3b0;
+  --head: #f5cb5c;
+  --line: rgba(245, 203, 92, 0.16);
+  --shadow-sm: 0 6px 18px rgba(0, 0, 0, 0.45);
+  --shadow: 0 16px 44px rgba(0, 0, 0, 0.6);
+  color-scheme: dark;
+}
+
+body {
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* Starry backdrop shared by the lighter sections */
+.about, .solutions, .serve, .more, .section--cream, .contact {
+  position: relative;
+  background:
+    radial-gradient(1.4px 1.4px at 12% 18%, rgba(255,255,255,.5) 50%, transparent 51%) 0 0 / 380px 380px,
+    radial-gradient(1px 1px at 68% 62%, rgba(255,224,138,.55) 50%, transparent 51%) 0 0 / 380px 380px,
+    radial-gradient(1.2px 1.2px at 40% 85%, rgba(255,255,255,.35) 50%, transparent 51%) 0 0 / 380px 380px,
+    var(--bg);
+}
+.solutions, .more { background-color: var(--bg-2); }
+.section--cream, .contact {
+  background:
+    radial-gradient(900px 420px at 100% 0, rgba(180, 39, 55, .18), transparent 60%),
+    radial-gradient(1.2px 1.2px at 22% 30%, rgba(255,255,255,.4) 50%, transparent 51%) 0 0 / 380px 380px,
+    var(--bg-2);
+}
+
+/* Headings & eyebrows */
+.title { color: var(--head); }
+.eyebrow { background: rgba(245, 203, 92, .1); color: var(--gold-300); border: 1px solid rgba(245, 203, 92, .25); }
+
+/* Header: keep the brand strip light so logo / mid.jpg / contact.gif stay readable */
+.topbar { background: linear-gradient(90deg, #0b0204, var(--maroon-800), #0b0204); }
+.brandbar { background: #fffaf2; border-bottom: 2px solid var(--gold-500); }
+
+.hero, .banner { background: #000; }
+.strip { border-block-color: #000; }
+
+/* Key benefits */
+.benefits { background: linear-gradient(#000 0 60px, var(--bg) 60px); }
+.benefit { background: var(--surface); border-color: var(--line); }
+.benefit h3 { color: var(--head); }
+.benefit p { color: var(--text-soft); }
+.benefit__icon { background: radial-gradient(circle at 30% 30%, #fff8ee, #f3dfbf); }
+
+/* About */
+.about__frame { border-color: var(--surface-2); }
+.about__content p { color: var(--text-soft); }
+.info-box { background: var(--surface); }
+.info-box h3 { color: var(--head); }
+.info-box p { color: var(--text-soft); }
+
+/* Cards */
+.card, .serve__box, .list-card, .review, .feature, .contact__form {
+  background: var(--surface);
+  border-color: var(--line);
+}
+.card:hover, .serve__box:hover { border-color: rgba(245, 203, 92, .45); }
+.card__body h3, .serve__body h3, .contact__form h3 { color: var(--head); }
+.card__body p, .serve__body p, .feature p { color: var(--text-soft); }
+
+/* Additional services list */
+.list-card a { color: var(--text); }
+.list-card li + li a { border-top-color: var(--line); }
+.list-card a:hover { background: rgba(245, 203, 92, .1); color: var(--gold-300); }
+
+/* Payment: logo tiles stay white (logos have dark text) */
+.payment__logo { background: #fffaf2; border-color: transparent; }
+.feature h3 { color: var(--head); }
+.feature a { color: var(--gold-300); }
+.feature img { background: #fffaf2; border-radius: 50%; padding: 8px; }
+
+/* CTA */
+.cta { background: radial-gradient(700px 400px at 100% 0, rgba(232, 178, 58, .22), transparent 60%), linear-gradient(120deg, #3d0610, #0f0306); }
+.float { border-color: rgba(245, 203, 92, .7); }
+
+/* Reviews */
+.review blockquote { color: var(--text-soft); }
+.review figcaption { border-top-color: var(--line); }
+.review figcaption strong { color: var(--head); }
+.review figcaption span { color: var(--text-soft); }
+.review__quote { color: rgba(245, 203, 92, .14); }
+.carousel__nav { background: var(--surface-2); color: var(--gold-300); }
+.carousel__dot { background: rgba(245, 203, 92, .25); }
+.carousel__dot[aria-selected="true"] { background: var(--gold-500); }
+.hero .carousel__nav { background: rgba(0, 0, 0, .55); color: #fff; }
+
+/* Contact form */
+.field label { color: var(--text-soft); }
+.field input, .field select, .field textarea {
+  background: var(--bg);
+  color: var(--text);
+  border-color: rgba(245, 203, 92, .22);
+}
+.field input::placeholder, .field textarea::placeholder { color: #8a7270; }
+.form-error { color: #ff8a8a; }
+
+/* Buttons that relied on light backgrounds */
+.btn--outline { border-color: var(--gold-500); color: var(--gold-300); }
+.btn--outline:hover { background: var(--gold-500); color: var(--maroon-900); }
+.link-arrow { color: var(--gold-300); }
+
+/* Footer */
+.footer { background: radial-gradient(800px 400px at 0 0, rgba(180, 39, 55, .25), transparent 60%), #080102; }
+.footer__logo { background: #fffaf2; }
