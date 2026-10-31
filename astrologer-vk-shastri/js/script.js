@@ -115,6 +115,38 @@
 
   document.querySelectorAll("[data-carousel]").forEach(function (el) { new Carousel(el); });
 
+  /* ---------- WhatsApp consultation form ---------- */
+  var form = document.getElementById("waForm");
+  if (form) {
+    var errorBox = document.getElementById("formError");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var name = form.elements.name;
+      var phone = form.elements.phone;
+      var digits = phone.value.replace(/\D/g, "");
+      var problems = [];
+      name.classList.toggle("is-invalid", !name.value.trim());
+      phone.classList.toggle("is-invalid", digits.length < 10 || digits.length > 13);
+      if (!name.value.trim()) problems.push("your name");
+      if (digits.length < 10 || digits.length > 13) problems.push("a valid mobile number");
+      if (problems.length) {
+        errorBox.textContent = "Please enter " + problems.join(" and ") + ".";
+        errorBox.hidden = false;
+        (name.value.trim() ? phone : name).focus();
+        return;
+      }
+      errorBox.hidden = true;
+      var text =
+        "*New Consultation Request*\n" +
+        "Name: " + name.value.trim() + "\n" +
+        "Phone: " + phone.value.trim() + "\n" +
+        "Problem: " + form.elements.problem.value + "\n" +
+        (form.elements.message.value.trim() ? "Details: " + form.elements.message.value.trim() : "");
+      window.open("https://wa.me/919521872136?text=" + encodeURIComponent(text), "_blank", "noopener");
+      form.reset();
+    });
+  }
+
   /* ---------- Scroll reveal ---------- */
   var items = document.querySelectorAll(".reveal");
   if (!("IntersectionObserver" in window) || reduceMotion) {
